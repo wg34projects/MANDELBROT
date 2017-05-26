@@ -1,24 +1,29 @@
-side project from shared-mem / semaphore training task BEL2 FHTW SS 2017
+#Mandelbrot fractal generator (output as PPM) for LINUX
 
-helmut.resch@gmail.com
-www.dwell.at
+#helmut.resch@gmail.com - www.dwell.at
 
-some features:
+##features:
 
 - full configuration via textfile
-- zoom loop function to stop with CTRL-C (clean stop!)
+- zoom loop function, stop with CTRL-C
 - one picture fixed zoom function
 - full CTRL-C handling with safe cleanup and no memory leaks
 - actual 4 PTHREADS
 - saved as BINARY PPM
 - makefile (for GCC)
 
-tested under LINUX only - Fedora 25 and latest Raspian (May 2017)
+##remarks
 
-configuration with SETUP.txt, see detailed info in the comment part of the file
+- tested under LINUX only - Fedora 25 and latest Raspian (May 2017)
 
-tool has no commande line options - so put values to SETUP.txt and start it
+- configuration with SETUP.txt, see detailed info in the comment part of the file
 
-compile with "make" - clean up with "make clean"
+- tool has no command line options - put values to SETUP.txt and start over...
+
+- compile with "make" - clean up with "make clean"
+
+- in subfolder samples I included some pictures :-)
+
+##copyright
 
 (c) by the Mandelbrot loving community :-)
