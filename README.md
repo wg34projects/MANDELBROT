@@ -1,6 +1,6 @@
 # Mandelbrot fractal generator for LINUX
 
-# helmut.resch@gmail.com - dwell.goip.de:8765 - www.dwell.at
+# helmut.resch@gmail.com - dwell.goip.de:8888 - www.dwell.at
 
 ## features:
 
