@@ -1,29 +1,26 @@
-#Mandelbrot fractal generator (output as PPM) for LINUX
+# Mandelbrot fractal generator for LINUX
 
-#helmut.resch@gmail.com - www.dwell.at
+# helmut.resch@gmail.com - dwell.goip.de:8765 - www.dwell.at
 
-##features:
+## features:
 
 - full configuration via textfile
 - zoom loop function, stop with CTRL-C
 - one picture fixed zoom function
 - full CTRL-C handling with safe cleanup and no memory leaks
-- actual 4 PTHREADS
+- 4 PTHREADS parallel
 - saved as BINARY PPM
 - makefile (for GCC)
+- no memory leaks (full valgrind test)
 
-##remarks
+## remarks
 
 - tested under LINUX only - Fedora 25 and latest Raspian (May 2017)
-
 - configuration with SETUP.txt, see detailed info in the comment part of the file
-
-- tool has no command line options - put values to SETUP.txt and start over...
-
+- tool has no command line options - put values to SETUP.txt
 - compile with "make" - clean up with "make clean"
+- in subfolder samples I included some pictures
 
-- in subfolder samples I included some pictures :-)
+## copyright
 
-##copyright
-
-(c) by the Mandelbrot loving community :-)
+feel free to use and change and adapt, don't charge me for mistakes and mention me if you took some code

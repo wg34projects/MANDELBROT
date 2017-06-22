@@ -42,14 +42,14 @@
 # start of configuration
 #
 fractal_a
-800
-600
-35
-3.557430e-1
-6.500264e-1
-1
-2000
-9
+1024
+768
+2
+0
+0
+2
+5000
+6
 50.0
 #
 # end of configuration

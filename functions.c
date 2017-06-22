@@ -17,6 +17,11 @@ void *calcStripeThread(void *code)
 				realPart = (yIterate - width  / 2.0) * zoomStart + realOffset;
 				imagPart = (xIterate - height / 2.0) * zoomStart + imagOffset;
 			}
+			else if (mode == 2)
+			{
+				realPart = (yIterate - width  / 2.0) * 4.0 / width;
+				imagPart = (xIterate - height / 2.0) * 4.0 / width;
+			}
 			else
 			{
 				realPart = (yIterate - width  / 2.0) * zoomInfo + realOffset;
