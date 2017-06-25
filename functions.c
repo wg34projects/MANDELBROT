@@ -17,11 +17,6 @@ void *calcStripeThread(void *code)
 				realPart = (yIterate - width  / 2.0) * zoomStart + realOffset;
 				imagPart = (xIterate - height / 2.0) * zoomStart + imagOffset;
 			}
-			else if (mode == 2)
-			{
-				realPart = (yIterate - width  / 2.0) * 4.0 / width;
-				imagPart = (xIterate - height / 2.0) * 4.0 / width;
-			}
 			else
 			{
 				realPart = (yIterate - width  / 2.0) * zoomInfo + realOffset;
@@ -59,7 +54,7 @@ void *calcStripeThread(void *code)
 		}
 	}
 
-	printf("%4d ", realIteration);
+	printf("[%05d]\t", realIteration);
 	pthread_exit(0);
 }
 
@@ -143,6 +138,8 @@ void ctrlChandlingGenerator(int dummy)
 {
 	printf("\n\nyou typed CTRL-C...\n");
 	EXIT1
+	free(pixelRGBNumberBuffer);
+	EXIT2
 	exit(EXIT_SUCCESS);
 }
 

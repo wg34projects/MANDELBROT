@@ -14,19 +14,27 @@
 #include <errno.h>
 #include <pthread.h>
 
-#define MAXWIDTH 4096
-#define MAXHEIGHT 2160
-#define MINWIDTH 100
-#define MINHEIGHT 100
+#define MAXWIDTH 		4096		// max pic width
+#define MAXHEIGHT 		2160		// max pic height
+#define MINWIDTH 		100			// min pic width
+#define MINHEIGHT 		100			// min pic height
+#define MAPS 			15			// amount of mappings in mapping.c
+#define THREADS 		12			// amount of parallel threads
 
-#define EXIT1	for (int i = 0; i < maxIteration; i++)\
-		{\
-			free(colorMapEasy[i]);\
-		}\
-		free(colorMapEasy);\
-		free(pixelRGBNumberBuffer);\
+// safe exit makros
+#define EXIT1			for (int i = 0; i < maxIteration; i++)\
+						{\
+							free(colorMapEasy[i]);\
+						}\
+						free(colorMapEasy);
 
+#define EXIT2			for (int i = 0; i < THREADS; i++)\
+						{\
+							free(codeMatrixThread[i]);\
+						}\
+						free(codeMatrixThread);
 
+// struct for the threads
 struct codeThread
 {
 	int pixel;
@@ -37,13 +45,14 @@ struct codeThread
 typedef struct codeThread CODETHREAD;
 typedef struct timeval TIMEVAL;
 
+// global vars for CTRL-C handling
 unsigned char **colorMapEasy;
 unsigned char *pixelRGBNumberBuffer;
 int maxIteration, width, height, mode;
 long double realOffset, imagOffset, zoomStart, zoomInfo;
+CODETHREAD **codeMatrixThread;
 
 // function prototypes
-
 void *calcStripeThread(void *code);
 void ctrlChandlingGenerator(int dummy);
 void ctrlChandlingWriter(int dummy);

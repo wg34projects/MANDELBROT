@@ -1,4 +1,5 @@
 # Mandelbrot fractal generator for LINUX
+## small update 25.06.2017
 
 # helmut.resch@gmail.com - dwell.goip.de:8888 - www.dwell.at
 
@@ -8,7 +9,7 @@
 - zoom loop function, stop with CTRL-C
 - one picture fixed zoom function
 - full CTRL-C handling with safe cleanup and no memory leaks
-- 4 PTHREADS parallel
+- 12 PTHREADS parallel, possible to change in header before compiling
 - saved as BINARY PPM
 - makefile (for GCC)
 - no memory leaks (full valgrind test)

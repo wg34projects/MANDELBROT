@@ -41,16 +41,16 @@
 #										
 # start of configuration
 #
-fractal_a
+b
 1024
 768
+500
+-0.81153120295763
+0.20142958206181
 2
-0
-0
-2
-5000
-6
-50.0
+3000
+4
+125.0
 #
 # end of configuration
 #
